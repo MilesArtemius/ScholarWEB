@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>EKScholarWEB - login</title>
+
+    <!-- update the version number as needed -->
+    <script defer src="/__/firebase/5.3.0/firebase-app.js"></script>
+    <!-- include only the Firebase features as you need -->
+    <script defer src="/__/firebase/5.3.0/firebase-auth.js"></script>
+    <script defer src="/__/firebase/5.3.0/firebase-database.js"></script>
+    <script defer src="/__/firebase/5.3.0/firebase-messaging.js"></script>
+    <script defer src="/__/firebase/5.3.0/firebase-storage.js"></script>
+    <!-- initialize the SDK after all desired features are loaded -->
+    <script defer src="/__/firebase/init.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="login.js"></script>
+  </head>
+
+  <body>
+    <div class="login-page">
+      <div class="form">
+        <div class="register-form">
+          <input id="r_email_id" type="email" placeholder="email"/>
+          <input id="r_password_id" type="password" placeholder="password"/>
+          <input id="r_rep_password_id" type="password" placeholder="repeat password"/>
+          <button id="register_button">create</button>
+          <p class="message">Already registered? <a href="#">Sign In</a></p>
+        </div>
+        <div class="login-form">
+          <input id="l_email_id" type="email" placeholder="email"/>
+          <input id="l_password_id" type="password" placeholder="password"/>
+          <button id="login_button">login</button>
+          <p class="message">Not registered? <a href="#">Create an account</a></p>
+        </div>
+      </div>
+    </div>
+    <p id="load">Firebase SDK Loading&hellip;</p>
+
+    <script>
+      $('.message a').click(function(){
+        $('.register-form').animate({height: "toggle", opacity: "toggle"}, "slow");
+        $('.login-form').animate({height: "toggle", opacity: "toggle"}, "slow");
+      });
+    </script>
+  </body>
+</html>
