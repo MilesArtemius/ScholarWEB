@@ -40,7 +40,7 @@
   transition: all 0.3 ease;
   cursor: pointer;
 }
-.form button:hover,.form button:active,.form button:focus {
+.form button:hover, .form button:active, .form button:focus {
   background: #43A047;
 }
 .form .message {
@@ -104,15 +104,38 @@
 
 .form .list .item {
   display: block;
-  text-align: left;
-  padding:16px;
+  margin:16px;
+  margin-left:0;
   text-decoration: none;
+  text-align: left;
+  width:100%;
+  cursor: pointer;
+}
+
+.form .list .item:hover, .form .list .item:active, .form .list .item:focus {
+  background: #DCDCDC;
+}
+
+.form .list .item .homework{
+  width:100%;
+}
+
+.form .list .item .item-header{
+}
+
+.form .list .item .item-mark{
+  vertical-align: middle;
+  text-align: right;
+}
+
+.form .list .item .item-body{
+  font-size: 13px;
+  max-width: 90%;
 }
 
 .form .list .divider {
   display: block;
   text-align: left;
-  padding:"16px";
   text-decoration: none;
   text-transform: uppercase;
   outline: 0;
@@ -121,6 +144,8 @@
   border: 0;
   color: #FFFFFF;
   padding:2px;
+  margin-top: 16px;
+  margin-left:0;
 }
 
 .form .menu {
@@ -129,6 +154,21 @@
   zoom: 1;
   vertical-align: top;
   font-size: 12px;
+}
+
+
+
+
+
+
+
+.form .task {
+  font-size: 18px;
+  text-align:justify;
+}
+.form .confirm {
+  font-size: 12px;
+  width: 24%;
 }
 
 
